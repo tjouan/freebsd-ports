@@ -1,0 +1,23 @@
+--- companion/src/firmwares/opentx/simulator/CMakeLists.txt.orig	2016-03-26 15:12:12 UTC
++++ companion/src/firmwares/opentx/simulator/CMakeLists.txt
+@@ -4,17 +4,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PRO
+ set(RADIO_SRC_DIRECTORY ${PROJECT_SOURCE_DIR}/../../radio/src)
+ 
+ add_custom_target(about_lbm_9x
+-  make lbm PCB=9X
++  gmake lbm PCB=9X
+   WORKING_DIRECTORY ${RADIO_SRC_DIRECTORY}
+ )
+ 
+ add_custom_target(about_lbm_taranis
+-  make lbm PCB=TARANIS
++  gmake lbm PCB=TARANIS
+   WORKING_DIRECTORY ${RADIO_SRC_DIRECTORY}
+ )
+ 
+ add_custom_target(commondeps
+-  make stamp_header tra
++  gmake stamp_header tra
+   WORKING_DIRECTORY ${RADIO_SRC_DIRECTORY}
+ )
+ 
